@@ -1,4 +1,3 @@
-```
 # Electricity Consumption Forecasting
 
 This is a time series forecasting project for electricity consumption using XGBoost.
@@ -27,7 +26,6 @@ The goal of this project is to predict future electricity consumption based on h
 2. Install the dependencies:
    ```bash
    pip install -r requirements.txt
-   ```
 
 ## How to Use
 
@@ -43,4 +41,4 @@ The goal of this project is to predict future electricity consumption based on h
 - `data/`: Folder containing the electricity consumption data.
 - `model.json`: File of the trained model.
 
-```
+

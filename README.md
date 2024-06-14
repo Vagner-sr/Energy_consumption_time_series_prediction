@@ -15,44 +15,44 @@ The following libraries and tools were used in this project:
 
 ## Project Workflow
 
-1. Data Loading and Visualization
+1. **Data Loading and Visualization**
 
 - Load the dataset containing PJME hourly energy usage.
 - Plot the time series data to visualize trends and patterns.
 
-2. Outlier Analysis and Removal
+2. **Outlier Analysis and Removal**
 
 - Identify and remove outliers in the dataset to improve model accuracy.
 - Visualize the distribution of energy usage and filter out anomalies.
 
-3. Train-Test Split
+3. **Train-Test Split**
 
 - Split the dataset into training and testing sets based on a specific date (01-01-2015).
 - Visualize the train-test split to ensure correct partitioning.
 
-4. Time Series Cross-Validation
+4. **Time Series Cross-Validation**
 
 - Implement time series cross-validation with 5 splits to evaluate model performance.
 - Visualize each fold's train-test split to ensure proper cross-validation.
 
-5. Feature Engineering
+5. **Feature Engineering**
 
 - Create new time-based features (hour, day of the week, month, year, etc.) to enhance model performance.
 - Add lag features to incorporate historical energy usage information.
 
-6. Model Training and Evaluation
+6.**Model Training and Evaluation**
 
 - Train the XGBoost regressor using the created features and target variable.
 - Evaluate model performance using root mean squared error (RMSE) across different folds.
 - Visualize model predictions against actual values to assess accuracy.
 
-7. Future Predictions
+7. **Future Predictions**
 
 - Generate future time frames for prediction.
 - Use the trained model to predict future energy usage.
 - Visualize the future predictions to understand the model's forecast.
 
-8. Model Saving and Loading
+8. **Model Saving and Loading**
 
 - Save the trained model to a file for future use.
 - Load the saved model and test its prediction capability.

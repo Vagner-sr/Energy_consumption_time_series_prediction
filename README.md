@@ -1,44 +1,70 @@
 # Electricity Consumption Forecasting
 
-This is a time series forecasting project for electricity consumption using XGBoost.
+This project aims to forecast the PJME (PJM Energy Market) hourly energy usage in megawatts (MW) using historical data and machine learning techniques. The process involves data preprocessing, feature engineering, outlier removal, time series cross-validation, and model training using the XGBoost algorithm. The final model predicts future energy consumption, and the results are visualized to evaluate the model's performance.
 
-## Description
+## Tools and Libraries
 
-The goal of this project is to predict future electricity consumption based on historical consumption data. The model utilizes temporal and trend features to make accurate predictions.
+The following libraries and tools were used in this project:
 
-## Prerequisites
+- **Pandas:** For data manipulation and analysis.
+- **Matplotlib:** For data visualization.
+- **Seaborn:** For enhanced data visualization.
+- **Numpy:** For numerical operations.
+- **XGBoost:** For implementing the gradient boosting model.
+- **Scikit-learn:** For model evaluation and time series cross-validation.
 
-- Python 3
-- Pandas
-- Matplotlib
-- NumPy
-- Seaborn
-- XGBoost
-- Scikit-learn
+## Project Workflow
 
-## Installation
+1. Data Loading and Visualization
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/Vagner-sr/Energy_consumption_time_series_prediction.git
-   ```
+- Load the dataset containing PJME hourly energy usage.
+- Plot the time series data to visualize trends and patterns.
 
-2. Install the dependencies:
-   ```bash
-   pip install -r requirements.txt
+2. Outlier Analysis and Removal
 
-## How to Use
+- Identify and remove outliers in the dataset to improve model accuracy.
+- Visualize the distribution of energy usage and filter out anomalies.
 
-1. Run the Jupyter notebook `Energy_Consumption_Prediction.ipynb` to train the model and make predictions.
+3. Train-Test Split
 
-2. Explore the source code to understand the data preprocessing methods, model training, and prediction.
+- Split the dataset into training and testing sets based on a specific date (01-01-2015).
+- Visualize the train-test split to ensure correct partitioning.
 
-3. To visualize the model predictions, execute the cells in the Jupyter notebook or analyze the generated plots.
+4. Time Series Cross-Validation
 
-## Project Structure
+- Implement time series cross-validation with 5 splits to evaluate model performance.
+- Visualize each fold's train-test split to ensure proper cross-validation.
 
-- `Energy_Consumption_Prediction.ipynb`: Jupyter notebook containing the project code.
-- `data/`: Folder containing the electricity consumption data.
-- `model.json`: File of the trained model.
+5. Feature Engineering
 
+- Create new time-based features (hour, day of the week, month, year, etc.) to enhance model performance.
+- Add lag features to incorporate historical energy usage information.
+
+6. Model Training and Evaluation
+
+- Train the XGBoost regressor using the created features and target variable.
+- Evaluate model performance using root mean squared error (RMSE) across different folds.
+- Visualize model predictions against actual values to assess accuracy.
+
+7. Future Predictions
+
+- Generate future time frames for prediction.
+- Use the trained model to predict future energy usage.
+- Visualize the future predictions to understand the model's forecast.
+
+8. Model Saving and Loading
+
+- Save the trained model to a file for future use.
+- Load the saved model and test its prediction capability.
+
+  
+## Results
+
+- The model achieved an average RMSE score of 3742.5833 across the validation folds.
+- The trained model effectively captures the trend and seasonality in the PJME energy usage data.
+- Future predictions indicate a reasonable forecast of energy usage, with visualizations supporting the model's accuracy.
+
+## Conclusion
+
+This project demonstrates the application of machine learning techniques to time series forecasting in the energy sector. The use of XGBoost and careful feature engineering resulted in a model capable of predicting future energy consumption with reasonable accuracy. Further improvements could be made by exploring additional features or different model architectures.
 
